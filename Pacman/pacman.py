@@ -441,7 +441,8 @@ class GhostRules:
     collide = staticmethod( collide )
 
     def canKill( pacmanPosition, ghostPosition ):
-        return manhattanDistance( ghostPosition, pacmanPosition ) <= COLLISION_TOLERANCE # 0.7 - How close ghosts must be to Pacman to kill
+        # COLLISION_TOLERANCE  = 0.7 - How close ghosts must be to Pacman to kill
+        return manhattanDistance( ghostPosition, pacmanPosition ) <= COLLISION_TOLERANCE
     canKill = staticmethod( canKill )
 
     def placeGhost(state, ghostState):
